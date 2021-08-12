@@ -47,7 +47,8 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: dev.metalcloud.cl
-      paths: /colors
+      paths:
+        - path: /colors
   tls:
     - secretName: dev-tls
       hosts:
