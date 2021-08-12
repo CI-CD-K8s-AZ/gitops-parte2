@@ -46,17 +46,13 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: metalcloud.cl
-      paths:
-        - path: /
-    - host: www.metalcloud.cl
+    - host: dev.metalcloud.cl
       paths:
         - path: /
   tls:
-    - secretName: prod-tls
+    - secretName: dev-tls
       hosts:
-        - metalcloud.cl
-        - www.metalcloud.cl
+        - dev.metalcloud.cl
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
