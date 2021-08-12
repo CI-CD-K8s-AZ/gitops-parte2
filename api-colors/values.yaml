@@ -49,7 +49,7 @@ ingress:
   hosts:
     - host: dev.metalcloud.cl
       paths:
-        - path: /colors(/|$)(.*)
+        - path: /api/colors(/|$)(.*)
   tls:
     - secretName: dev-tls
       hosts:
