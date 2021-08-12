@@ -42,13 +42,14 @@ service:
 
 ingress:
   enabled: true
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: dev.metalcloud.cl
       paths:
-        - path: /names
+        - path: /names(/|$)(.*)
   tls:
     - secretName: dev-tls
       hosts:
