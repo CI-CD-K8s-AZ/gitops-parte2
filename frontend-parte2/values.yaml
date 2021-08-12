@@ -47,9 +47,11 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: metalcloud.cl
-      paths: []
+      paths:
+        - path: /
     - host: www.metalcloud.cl
-      paths: []
+      paths:
+        - path: /
   tls:
     - secretName: frontend-parte2-tls
       hosts:
