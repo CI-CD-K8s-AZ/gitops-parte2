@@ -47,13 +47,13 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: metalcloud.cl
+    - host: qa.metalcloud.cl
       paths:
         - path: /api/colors(/|$)(.*)
   tls:
-    - secretName: prod-tls
+    - secretName: qa-tls
       hosts:
-        - metalcloud.cl
+        - qa.metalcloud.cl
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
