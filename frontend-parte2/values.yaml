@@ -53,7 +53,7 @@ ingress:
       paths:
         - path: /
   tls:
-    - secretName: frontend-parte2-tls
+    - secretName: prod-tls
       hosts:
         - metalcloud.cl
         - www.metalcloud.cl
